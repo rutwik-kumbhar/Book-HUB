@@ -1,0 +1,102 @@
+<div class="flex mt-16">
+    <div class="w-1/2  border-r border-dashed border-gray-400 bg-white">
+        <!-- Content for the first div (50% width) -->
+        <div class="flex justify-center items-center">
+            <img src="https://bookscape.com/_next/static/media/repro-large.9463e631.png" alt="">
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <p class="text-2xl text-gray-500">Let’s get started</p>
+            <p class="text-2xl text-gray-500">your journey with books!</p>
+        </div>
+        <div class="flex justify-center items-center space-x-8">
+            <div class="flex flex-col items-center">
+                <img src="https://bookscape.com/_next/static/media/genuine-books-icon.8b9bfcfd.svg" alt="">
+                <p class="text-center text-gray-600">Genuine books</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://bookscape.com/_next/static/media/great_pricingIcon.04549e40.svg" alt="">
+                <p class="text-center text-gray-600">Great pricing</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="" src="https://bookscape.com/_next/static/media/faster-delivery-icon.f31192ee.svg" alt="">
+                <p class="text-center text-gray-600">Faster delivery</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-1/2 bg-white p-4">
+        <!-- Content for the second div (50% width) -->
+        <div class="mt-3">
+            <form class="max-w-sm mx-auto" #user = "ngForm"  (ngSubmit)="signUpUser(user.value)">
+                <div>
+                    <h1>Hello, welcome back!</h1>
+                    <p>Let’s go create your account</p>
+                </div>
+
+                <div class="mb-2 mt-1">
+                    <input type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="First name"  name="firstName" ngModel>
+                </div>
+                <div class="mb-2">
+                    <input type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Last name" name="lastName" ngModel>
+                </div>
+                <div class="mb-2">
+                    <input type="email" 
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Email" required  required name="email"  ngModel>
+                </div>
+                <div class="mb-2">
+                    <input type="number" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Mobile Number" required name="mobileNumber" ngModel>
+                </div>
+                <div class="mb-2">
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required placeholder="Password" name="password" ngModel>
+                </div>
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">SIGN
+                    IN</button>
+            </form>
+
+
+
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-5 bg-gray-200 border-0 dark:bg-gray-700">
+                <span
+                    class=" px-3 font-medium text-gray-900 bg-white left-1/2 dark:text-white dark:bg-gray-900">or</span>
+                <hr class="w-64 h-px my-5 bg-gray-200 border-0 dark:bg-gray-700">
+            </div>
+
+
+            <div class="flex items-center justify-center  space-x-7">
+                <button>
+                    <svg class="h-10 w-10 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256,8C119.1,8,8,119.1,8,256S119.1,504,256,504,504,392.9,504,256,392.9,8,256,8ZM185.3,380a124,124,0,0,1,0-248c31.3,0,60.1,11,83,32.3l-33.6,32.6c-13.2-12.9-31.3-19.1-49.4-19.1-42.9,0-77.2,35.5-77.2,78.1S142.3,334,185.3,334c32.6,0,64.9-19.1,70.1-53.3H185.3V238.1H302.2a109.2,109.2,0,0,1,1.9,20.7c0,70.8-47.5,121.2-118.8,121.2ZM415.5,273.8v35.5H380V273.8H344.5V238.3H380V202.8h35.5v35.5h35.2v35.5Z" />
+                    </svg>
+                </button>
+                <button>
+                    <svg class="h-10 w-10 fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="text-center mt-3 font-black">
+                <a routerLink="/sign-in">
+                    <p>Already have an account?<span class="text-red-500 font-extrabold"> Sign Up</span></p>
+                     
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
