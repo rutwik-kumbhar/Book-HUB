@@ -1,0 +1,72 @@
+<!-- AddBookComponent HTML -->
+<div class="container mx-auto mt-8">
+    <div class="max-w-2xl mx-auto bg-white p-8 border rounded-md shadow-md ">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Add Book</h2>
+
+        <!-- Book Form -->
+        <form  *ngIf="bookForm" [formGroup]="bookForm" class="grid grid-cols-2 gap-4">
+            <!-- Left Column -->
+            <div>
+                <!-- Title -->
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-600 text-sm font-medium mb-2">Title</label>
+                    <input type="text" id="title" formControlName="title" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Author -->
+                <div class="mb-4">
+                    <label for="author" class="block text-gray-600 text-sm font-medium mb-2">Author</label>
+                    <input type="text" id="author" formControlName="author" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Genre -->
+                <div class="mb-4">
+                    <label for="genre" class="block text-gray-600 text-sm font-medium mb-2">Genre</label>
+                    <input type="text" id="genre" formControlName="genre" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-4">
+                    <label for="description" class="block text-gray-600 text-sm font-medium mb-2">Description</label>
+                    <textarea id="description" formControlName="description" class="w-full p-2 border rounded-md" rows="1" required></textarea>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Category -->
+                <div class="mb-4">
+                    <label for="category" class="block text-gray-600 text-sm font-medium mb-2">Category</label>
+                    <input type="text" id="category" formControlName="category" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Price -->
+                <div class="mb-4">
+                    <label for="price" class="block text-gray-600 text-sm font-medium mb-2">Price</label>
+                    <input type="number" id="price" formControlName="price" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Discount Percentage -->
+                <div class="mb-4">
+                    <label for="discount" class="block text-gray-600 text-sm font-medium mb-2">Discount Percentage</label>
+                    <input type="number" id="discount" formControlName="discount" class="w-full p-2 border rounded-md" required>
+                </div>
+
+                <!-- Quantity -->
+                <div class="mb-4">
+                    <label for="quantity" class="block text-gray-600 text-sm font-medium mb-2">Quantity</label>
+                    <input type="number" id="quantity" formControlName="quantity" class="w-full p-2 border rounded-md" required>
+                </div>
+
+            </div>
+            <!-- Upload Book Image -->
+            <div class="mb-4 text-center">
+                <label for="image" class="block text-gray-600 text-sm font-medium mb-2">Upload Book Image</label>
+                <input type="file" id="image" formControlName="image" class="w-full p-2 border rounded-md" accept="image/*" required (change)="onFileSelected($event)">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" (click)="onUpload()" class="col-span-2 bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Add Book</button>
+        </form>
+    </div>
+</div>

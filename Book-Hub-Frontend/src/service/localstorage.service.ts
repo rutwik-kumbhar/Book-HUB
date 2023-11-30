@@ -16,7 +16,7 @@ export class LocalstorageService {
     localStorage.setItem('role', role);
   }
   public getRole(){
-    localStorage.getItem('role');
+    return localStorage.getItem('role');
   }
 
 
@@ -25,10 +25,6 @@ export class LocalstorageService {
   }
 
   public isUserLogin(){
-
-    // const role = this.getRole()
-    // if(role)
-
     return this.getToken();
   }
 

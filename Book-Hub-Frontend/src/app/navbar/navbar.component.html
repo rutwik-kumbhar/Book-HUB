@@ -41,11 +41,11 @@
                 <li>
                     <div class="flex items-center justify-between space-x-5 mr-10">
                         <a routerLink="/sign-in" >
-                            <button class="rounded-lg bg-blue-600  text-white px-5 py-2" *ngIf="isUserLogin() == ''">SIGN IN</button>
+                            <button class="rounded-lg bg-blue-600  text-white px-5 py-2" *ngIf="!isUserLogin()">SIGN IN</button>
                         </a>
 
                         <button class="rounded-lg text-white px-3 py-1" id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdown" *ngIf="isUserLogin() !== ''">
+                            data-dropdown-toggle="dropdown" *ngIf="isUserLogin()">
                             <mat-icon class="text-gray-800 hover:text-blue-600">person</mat-icon>
                         </button>
 
@@ -58,11 +58,11 @@
                                     <a href="#"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                                 </li>
-                                <li *ngIf="isUserLogin() != 'ROLE_PUBLISHER'">
+                                <li *ngIf="userRole() == 'ROLE_PUBLISHER'">
                                     <a routerLink="/publisher"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Publihser Dashboard</a>
                                 </li>
-                                <li *ngIf="isUserLogin() != 'ROLE_ADMIN'">
+                                <li *ngIf="userRole() == 'ROLE_ADMIN'">
                                     <a href="/admin"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Admin Dashboard</a>
                                 </li>

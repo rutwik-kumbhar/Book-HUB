@@ -14,7 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FooterComponent } from './footer/footer.component';
 import { SignInComponent } from './navbar/sign-in/sign-in.component';
@@ -25,6 +25,7 @@ import { SignUpComponent } from './navbar/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PublisherDashboardComponent } from './publisher-dashboard/publisher-dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AddBookComponent } from './publisher-dashboard/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     SignInComponent,
     SignUpComponent,
     PublisherDashboardComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     MatButtonModule, MatDividerModule, MatIconModule,
     FontAwesomeModule, 
     FormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

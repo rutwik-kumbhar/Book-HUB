@@ -39,6 +39,7 @@ public class BookServiceImpl implements BookService {
 		newBook.setImageUrl(url);
 		newBook.setPrice(Integer.parseInt(book.get("price")));
 		newBook.setDiscountedPerceantage(Integer.parseInt(book.get("discountedPerceantage")));
+		newBook.setCategory(book.get("category"));
 		newBook.setQuantity(Integer.parseInt(book.get("quantity")));
 	
 

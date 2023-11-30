@@ -23,7 +23,7 @@ export class SignInComponent {
     this.authService.loginUser(data).subscribe((res)=>{
         // console.log(res.headers.get('Authorization'))
         this.localstorage.setToken(res.headers.get('Authorization'))
-        console.log(res.body)
+        // console.log(res.body)
         this.localstorage.setRole(res.body.role);
     },(error)=>{
         alert("Login Failed")
